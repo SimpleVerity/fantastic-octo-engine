@@ -1,0 +1,57 @@
+[
+  {
+    "id": "8ffac08c",
+    "type": "function",
+    "name": "Hello!",
+    "outputs": 1,
+    "memorySize": 128,
+    "timeout": 30,
+    "location": "inline",
+    "envVars": {},
+    "x": 550,
+    "y": 220,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f55f501c",
+    "type": "restApi",
+    "path": "/",
+    "domain": "dev-api-001.simpleverity.com",
+    "x": 220,
+    "y": 200,
+    "wires": [
+      [
+        "8ffac08c"
+      ]
+    ]
+  },
+  {
+    "id": "87ee455c",
+    "type": "function",
+    "name": "Echo",
+    "outputs": 1,
+    "memorySize": 128,
+    "timeout": 30,
+    "location": "inline",
+    "x": 550,
+    "y": 280,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "1f5aa8ec",
+    "type": "restApi",
+    "path": "/{message}",
+    "domain": "dev-api-001.simpleverity.com",
+    "x": 200,
+    "y": 300,
+    "wires": [
+      [
+        "87ee455c"
+      ]
+    ]
+  }
+]
